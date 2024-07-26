@@ -1,6 +1,6 @@
 async function searchWikidata() {
     const query = document.getElementById('search-input').value;
-    const searchUrl = `https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&origin=*`;
+    const searchUrl = `https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&srlimit=50&origin=*`;
 
     try {
         const searchResponse = await fetch(searchUrl);
