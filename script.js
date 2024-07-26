@@ -82,9 +82,10 @@ function displayResults(results) {
             const imageValue = result.claims.P18[0].mainsnak.datavalue.value;
             const imageUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${imageValue}`;
             const thumbnail = document.createElement('img');
-            thumbnail.src = `${imageUrl}?width=100`;
+            thumbnail.src = `${imageUrl}?width=50`;
             thumbnail.alt = imageValue;
-            thumbnail.style.width = '100px';
+            thumbnail.style.width = '50px';
+            thumbnail.style.float = 'right';
             thumbnail.style.height = 'auto';
             resultItem.appendChild(thumbnail);
         }
